@@ -44,20 +44,20 @@ to run jobs (it does not actually run them).
 
 An example of running the simulator with a given pre-generated traffic file.
 
-./scripts/gen_traffic.py 	--job-list ./conf/jobs.txt \
-													--time-unit 1 \
-													--replay-traffic \
-													--traffic-infile ./conf/traffic_bursty.txt | \
-./scripts/cluster_simulator.py \
-													--host-list ./conf/hosts.txt \
-																	-v --time-unit 1 \
-																	--enable-statistics \
-																	--stats-log stats.txt \
-																	--stats-trace-file stats_trace.csv \
-																	--log log.txt \
-																	--scheduler naive \ # this is SLURM extended 
-																	--global-power-budget 20000 \
-																	--time-limit 3600 \
+./scripts/gen_traffic.py 	--job-list ./conf/jobs.txt \\
+													--time-unit 1 \\
+													--replay-traffic \\
+													--traffic-infile ./conf/traffic_bursty.txt | \\
+./scripts/cluster_simulator.py \\
+													--host-list ./conf/hosts.txt \\
+																	-v --time-unit 1 \\
+																	--enable-statistics \\
+																	--stats-log stats.txt \\
+																	--stats-trace-file stats_trace.csv \\
+																	--log log.txt \\
+																	--scheduler naive \\ # this is SLURM extended 
+																	--global-power-budget 20000 \\
+																	--time-limit 3600 \\
 																	--job-power-cap 120
 
 
